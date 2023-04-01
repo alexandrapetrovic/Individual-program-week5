@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework5</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script>
+
+        function onOperationChange(operation) {
+            let quantityValue = document.getElementById('quantity').innerHTML;
+            if (operation == '-') {
+                quantityValue = Number(quantityValue);
+                if (quantityValue <= 1) {
+                    return;
+                }
+                quantityValue--;
+
+            } else if (operation == '+') {
+                quantityValue = Number(quantityValue);
+                if (quantityValue >= 20) {
+                    return;
+                }
+                quantityValue++;
+            }
+
+            document.getElementById('quantity').innerHTML = quantityValue;
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="./images/logo.png" alt="logo">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#" class="nav-link">women’s</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">men’s</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">brands</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-img">
+            <img src="./images/basket.png" alt="basket" width="40" height="40">
+            <img src="./images/ellipse.png" alt="ellipse" width="40" height="40">
+        </div>
+    </header>
+    <main>
+        <section>
+            <img class="img-mobile" src="./images/product-mobile.png" alt="">
+            <div class="container">
+                <div class="l-container">
+                    <img class="container-img" src="./images/product.png" alt="product">
+                    <div class="container-gallery">
+                        <img src="./images/photo1.png" alt="" width="90px" height="90px">
+                        <img class="mx-20" src="./images/photo2.png" alt="" width="90px" height="90px">
+                        <img src="./images/photo3.png" alt="" width="90px" height="90px">
+                    </div>
+                </div>
+                <div class="r-container">
+                    <h2 class="color-gray fw-400">NARCISO</h2>
+                        <h1 class="fw-700">Ruby Orchid Fragrance</h1>
+                        <h3 class="fw-400">Eau de Parfum for her</h3>
+                        <p>Experience the iconic original female fragrance by Narciso. Addictive floral notes with the warm woody undertones inspires a whirlwind of sweet sensations, transporting you to a world of floral fantasy.</p>
+                        <div class="d-flex-mobile">
+                            <div class="price fw-400">124.00€</div>
+                            <div class="old-price color-gray">184.00€</div>
+                        </div>
+                        <div class="card-products">
+                            <div class="card" id="30ml" onclick="onColorChange('30ml')">
+                                <div>30ml</div>
+                                <div>50.00€</div>
+                            </div>
+                            <div class="card" id="50ml" onclick="onColorChange('50ml')">
+                                <div>50ml</div>
+                                <div>100.00€</div>
+                            </div>
+                            <div class="card" id="80ml" onclick="onColorChange('80ml')">
+                                <div>80ml</div> 
+                                <div>124.00€</div>
+                            </div>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="card-quantity">
+                                <div class="p-2 cursor-pointer font-size" onclick="onOperationChange('-')">-</div>
+                                <div class="quantity p-2 cursor-pointer" id="quantity">1</div>
+                                <div class="p-2 cursor-pointer font-size"  onclick="onOperationChange('+')">+</div>
+                            </div> 
+                            <button class="btn">Add to cart</button>
+                        </div>
+                </div>
+            </div>
+                <!--<div class="card">
+                    <img class="card-img" src="./images/product.png" alt="product">
+                    <div class="card-details">
+                        <h2 class="color-gray fw-400">NARCISO</h2>
+                        <h1 class="fw-700">Ruby Orchid Fragrance</h1>
+                        <h3 class="fw-400">Eau de Parfum for her</h3>
+                        <p>Experience the iconic original female fragrance by Narciso. Addictive floral notes with the warm woody undertones inspires a whirlwind of sweet sensations, transporting you to a world of floral fantasy.</p>
+                        <div class="price fw-400">124.00€</div>
+                        <div class="old-price color-gray">184.00€</div>
+                        <div class="card-products">
+                            <img src="./images/product1.png" alt="product1">
+                            <img src="./images/product2.png" alt="product2">
+                            <img src="./images/product3.png" alt="product3">
+                        </div>
+                        <div class="card-bottom">
+                            <div class="vectors">
+                                <img src="./images/minus.png" alt="minus">
+                                <img class="mx-20" src="./images/1.png" alt="number">
+                                <img src="./images/plus.png" alt="plus">
+                            </div> 
+                            <button class="btn">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-gallery">
+                <img src="./images/photo1.png" alt="" width="90px" height="90px">
+                <img class="mx-20" src="./images/photo2.png" alt="" width="90px" height="90px">
+                <img src="./images/photo3.png" alt="" width="90px" height="90px">
+            </div>-->
+        </section>
+
+    </main>   
+    
+</body>
+</html>

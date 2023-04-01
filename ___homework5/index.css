@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+h1 - 36px
+h2 - 24px
+h3 - 20px
+*/
+body {
+  background-color: #FCFCFC;
+  font-family: "Lato", "Inter", sans-serif;
+}
+
+/*main {
+ padding: 2rem;
+}*/
+h1, .h1 {
+  font-size: 2.25rem;
+}
+
+h2, .h2 {
+  font-size: 1.5rem;
+}
+
+h3, .h3 {
+  font-size: 1.25rem;
+}
+
+.color-gray {
+  color: #868584;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.mx-20 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-content-center {
+  align-content: center;
+}
+
+.h-100 {
+  height: 100vh;
+}
+
+.p-2 {
+  padding: 1rem;
+}
+
+.font-size {
+  width: 40px;
+  height: 40px;
+  font-size: 28px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.img-mobile {
+  display: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.header .logo {
+  object-fit: cover;
+  width: 196px;
+  height: 60px;
+}
+.header .header-img {
+  display: flex;
+  gap: 1rem;
+}
+.header .header-img img {
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20rem;
+}
+.nav .nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav .nav-item {
+  padding: 1rem;
+  cursor: pointer;
+}
+.nav .nav-item:hover {
+  color: #1F93FF;
+}
+.nav .nav-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  margin: 4rem;
+  padding: 4rem;
+}
+
+.l-container .container-img {
+  object-fit: cover;
+  width: 480px;
+  height: 620px;
+}
+.l-container .container-gallery {
+  margin-top: 40px;
+  margin-left: 4rem;
+}
+
+.r-container {
+  /*width: 480px;
+  height: 520px;*/
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+}
+.r-container .price {
+  font-size: 2.25rem;
+}
+.r-container .old-price {
+  text-decoration-line: line-through;
+}
+
+.card-products {
+  display: flex;
+  gap: 1rem;
+}
+.card-products .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 2rem;
+  width: 88px;
+  height: 24px;
+  border-radius: 12px;
+  border: 1px solid #000000;
+}
+.card-products .card.active {
+  background-color: #FBEBEB;
+  border: 3px solid #000000;
+}
+
+.card-bottom {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.card-bottom .card-quantity {
+  display: flex;
+  gap: 10px;
+}
+.card-bottom .quantity {
+  color: #868584;
+  font-size: 24px;
+}
+
+.btn {
+  padding: 12px 32px;
+  width: 48%;
+  color: white;
+  background-color: #000000;
+  border: 1px solid #000000;
+  cursor: pointer;
+  font-size: 24px;
+}
+.btn:hover {
+  color: #000000;
+  background-color: white;
+  border: 1px solid #000000;
+}
+.btn:focus {
+  border: 1px solid #1F93FF;
+  color: white;
+  background-color: #000000;
+}
+.btn:active {
+  color: #868584;
+  background-color: #000000;
+  border: 1px solid #000000;
+}
+
+@media screen and (max-width: 789px) {
+  .img-mobile {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+  }
+  .nav {
+    display: none;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    margin: auto;
+  }
+  .container .container-img {
+    display: none;
+  }
+  .container .container-gallery {
+    display: none;
+  }
+  .card-products {
+    display: none;
+  }
+  .d-flex-mobile {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card-bottom {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
